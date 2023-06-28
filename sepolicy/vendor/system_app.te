@@ -1,0 +1,15 @@
+# DC-Dimming (Anti-Flicker) / HBM
+allow system_app vendor_sysfs_graphics:file rw_file_perms;
+allow system_app vendor_sysfs_graphics:dir search;;
+
+# Power Efficient Workqueue
+allow system_app sysfs_workqueue:file rw_file_perms;
+allow system_app sysfs_workqueue:dir search;
+
+# USB-OTG
+allow system_app vendor_sysfs_usb_supply:file rw_file_perms;
+allow system_app vendor_sysfs_usb_supply:dir search;
+
+# Game Mode (High Touch Polling Rate)
+allow system_app vendor_proc_display:file rw_file_perms;
+allow system_app vendor_proc_display:dir search;

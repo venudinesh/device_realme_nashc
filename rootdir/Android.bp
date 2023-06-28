@@ -74,6 +74,13 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
+    name: "init.oplus_extras.rc",
+    src: "etc/init.oplus_extras.rc",
+    sub_dir: "init",
+    device_specific: true,
+}
+
+prebuilt_etc {
     name: "ueventd.mtk.rc",
     filename: "ueventd.rc",
     src: "etc/ueventd.mtk.rc",
