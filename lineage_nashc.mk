@@ -15,22 +15,36 @@ $(call inherit-product, device/realme/nashc/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Inherit some RisingOSS stuff.
-RISING_CHIPSET := "Mediatek Helio G95"
-RISING_MAINTAINER := Eren_Yeager
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_FACE_UNLOCK_SUPPORTED := true
-RISING_PACKAGE_TYPE := "CORE GAPPS"
-TARGET_ENABLE_BLUR := true
+# Device config
 TARGET_HAS_UDFPS := true
-SUSHI_BOOTANIMATION := 1080
-WITH_GMS := true
-TARGET_CORE_GMS := true
-TARGET_USE_GOOGLE_TELEPHONY := fals
-TARGET_CORE_GMS_EXTRAS := true
-TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_ENABLE_BLUR := true
 TARGET_EXCLUDES_AUDIOFX := false
-TARGET_BUILD_APERTURE_CAMERA := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+
+# GAPPS config
+# 0 - NO GAPPS (default)
+# 1 - CORE GAPPS
+# 2 - FULL GAPPS
+WITH_GAPPS := 0
+
+# Use Google Telephony pack (Dialer, Contacts, Messaging) on GAPPS builds
+# Default = true
+TARGET_USE_GOOGLE_TELEPHONY := false
+
+# Include Pixel Framework on FULL GAPPS builds
+# Default = true
+TARGET_USE_PIXEL_FRAMEWORK := true
+
+# Debugging
+TARGET_INCLUDE_MATLOG := true
+TARGET_DEFAULT_ADB_ENABLED := true
+
+# Maintainer
+ALPHA_BUILD_TYPE := Unofficial
+ALPHA_MAINTAINER := Eren_Yeager
 
 PRODUCT_NAME := lineage_nashc
 PRODUCT_DEVICE := nashc
