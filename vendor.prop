@@ -150,6 +150,7 @@ ro.vendor.gps.chrdev=gps_drv
 ro.vendor.mtk_log_hide_gps=0
 
 # Radio
+persist.sys.radio.force_lte_ca=true
 persist.vendor.radio.fd.counter=150
 persist.vendor.radio.fd.off.counter=50
 persist.vendor.radio.fd.r8.counter=150
@@ -276,3 +277,6 @@ persist.log.tag.PowerHalMgrServiceImpl=S
 persist.log.tag.PowerHalWifiMonitor=S
 persist.log.tag.RILMUXD=S
 persist.log.tag.UxUtility=S
+
+# IncrementalFS
+ro.incremental.enable=yes
