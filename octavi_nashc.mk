@@ -12,10 +12,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
 # Inherit from device makefile.
 $(call inherit-product, device/realme/nashc/device.mk)
 
-# Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common OctaviOS stuff.
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_nashc
+#octavi properties
+OCTAVI_DEVICE_MAINTAINER := Eren_Yeager
+TARGET_WANTS_FOD_ANIMATIONS=true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_USES_AOSP_RECOVERY := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+
+# Build Status
+OCTAVI_BUILD_TYPE := UNOfficial
+
+#Gapps
+WITH_GAPPS=false
+
+PRODUCT_NAME := octavi_nashc
 PRODUCT_DEVICE := nashc
 PRODUCT_MANUFACTURER := Realme
 PRODUCT_BRAND := Realme
