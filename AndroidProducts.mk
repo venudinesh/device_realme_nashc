@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cherish_nashc.mk
+    $(LOCAL_DIR)/lineage_nashc.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_nashc-user \
-    cherish_nashc-userdebug \
-    cherish_nashc-eng
+    lineage_nashc-user \
+    lineage_nashc-userdebug \
+    lineage_nashc-eng
