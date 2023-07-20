@@ -119,9 +119,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
-# Lineage Health
-TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/oplus_chg/battery/mmi_charging_enable
-
 # Platform
 TARGET_BOARD_PLATFORM := mt6785
 BOARD_HAS_MTK_HARDWARE := true
@@ -187,8 +184,7 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
 ODM_MANIFEST_FILES := $(DEVICE_PATH)/manifest_odm.xml
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(DEVICE_PATH)/framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    $(DEVICE_PATH)/framework_compatibility_matrix.xml
 
 DEVICE_MANIFEST_SKUS += nfc
 DEVICE_MANIFEST_NFC_FILES := $(DEVICE_PATH)/manifest_nfc.xml
